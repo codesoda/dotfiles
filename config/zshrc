@@ -47,9 +47,6 @@ plugins=(git osx)
 # alias to remove all local branches, except master
 alias gbr="git branch | grep -v "master" | xargs git branch -D"
 
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-
 source $ZSH/oh-my-zsh.sh
 source ~/.fresh/build/shell.sh
 

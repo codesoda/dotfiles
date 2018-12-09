@@ -54,5 +54,6 @@ source ~/.fresh/build/shell.sh
 
 # Customize to your needs...
 export EDITOR='vim'
-export PATH=$(pyenv root)/shims:$(npm bin):/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/heroku/bin:/usr/local/opt/postgresql@9.6/bin:$PATH
+export GOPATH=$HOME/projects
+export PATH=$(pyenv root)/shims:$(npm bin):/usr/local/Cellar/node/10.8.0/bin/:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/heroku/bin:/usr/local/opt/postgresql@9.6/bin:/Users/codesoda/miniconda3/bin:$PATH
 eval "$(rbenv init -)"

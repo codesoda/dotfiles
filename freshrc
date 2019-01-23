@@ -33,3 +33,4 @@ init_vim() {
 fresh_after_build() {
   init_vim
 }
+fresh bundle/\* --file

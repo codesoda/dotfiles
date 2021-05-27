@@ -10,8 +10,9 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gdb="git branch | grep -v 'master' | xargs git branch -D"
 alias ag='ag --before --after'
+alias cat='bat'
+alias gdb="git branch | grep -v 'master' | xargs git branch -D"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

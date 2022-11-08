@@ -2,3 +2,9 @@
 BUNDLE_JOBS: '4'
 BUNDLE_PATH: vendor/bundle
 BUNDLE_DISABLE_SHARED_GEMS: true
+#BUNDLE_BUILD__FFI: "--enable-system-libffi --with-cflags=-Wno-implicit-function-declaration"
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+# BUNDLE_BUILD__PUMA: "--with-cflags=-Wno-error=implicit-function-declaration"
+BUNDLE_SET: "build.ruby_audio --with-sndfile-dir=/opt/homebrew/Cellar/libsndfile/1.0.31 --with-sndfile-lib=/opt/homebrew/Cellar/libsndfile/1.0.31/lib --with-sndfile-include=/opt/homebrew/Cellar/libsndfile/1.0.31/include"
+BUNDLE_BUILD_THIN: "--with-cflags=-Wno-error=implicit-function-declaration"
+BUNDLE_BUILD__PG: "--with-pg-config=/opt/homebrew/Cellar/libpq/14.3/bin/pg_config --with-cflags=-Wno-error=implicit-function-declaration"

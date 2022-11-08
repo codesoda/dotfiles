@@ -43,7 +43,7 @@ alias gdb="git branch | grep -v 'master' | xargs git branch -D"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
+plugins=(git macos)
 
 # alias to remove all local branches, except master
 alias gbr="git branch | grep -v "master" | xargs git branch -D"
@@ -52,9 +52,12 @@ source $ZSH/oh-my-zsh.sh
 source ~/.fresh/build/shell.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+. $(brew --prefix asdf)/asdf.sh
 
 # Customize to your needs...
+export THOR_MERGE="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code -d $1 $2"
+export VOLTA_HOME=$HOME/.volta
 export EDITOR='vim'
 export GOPATH=$HOME/projects
-export PATH=$(pyenv root)/shims:$(npm bin):/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/Users/codesoda/miniconda3/bin:$PATH
+export PATH=$VOLTA_HOME/bin:$(pyenv root)/shims:$(npm bin):/usr/local/Cellar/node/10.8.0/bin/:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/heroku/bin:/opt/homebrew/opt/libpq/bin:/usr/local/opt/postgresql@9.6/bin:/Users/codesoda/miniconda3/bin:$PATH
 eval "$(rbenv init -)"
